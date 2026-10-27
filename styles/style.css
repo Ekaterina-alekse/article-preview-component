@@ -11,7 +11,7 @@
     --color-light-grayish-blue: hsl(210, 46%, 95%);
     --color-white: hsl(0, 0%, 100%);
 
-    --shadow-card: 20px 40px 40px -10px rgba(0, 0, 0, 0.3);
+    --shadow-card: 20px 40px 40px -10px rgba(0, 0, 0, 0.1);
 }
 
 h1,
@@ -72,9 +72,9 @@ body {
     gap: 2.625rem;
     background-color: var(--color-white);
     border-radius: 0.625rem;
-    overflow: hidden;
     margin-block-end: 2rem;
     position: relative;
+    box-shadow: var(--shadow-card);
 }
 
 @media (min-width: 48rem) {
@@ -89,6 +89,7 @@ body {
     display: block;
     width: 100%;
     height: 12.5rem;
+    overflow: hidden;
     object-fit: cover;
     object-position: center 30%;
 }
@@ -200,11 +201,6 @@ body {
     opacity: 0.7;
 }
 
-.card__share-btn[aria-expanded="true"] {
-    background-color: var(--color-very-dark-grayish-blue);
-    color: var(--color-white);
-}
-
 .card__share-btn:focus-visible {
     outline: 0.125rem solid var(--color-very-dark-grayish-blue);
     outline-offset: 0.125rem;
@@ -268,6 +264,28 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.share-menu__close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-desaturated-dark-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: auto;
+    /* Прижимает кнопку к правому краю */
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.share-menu__close-btn:hover,
+.share-menu__close-btn:focus-visible {
+    background-color: var(--color-light-grayish-blue);
 }
 
 .share-menu__link {
