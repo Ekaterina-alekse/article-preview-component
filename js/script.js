@@ -8,8 +8,6 @@ function toggleMenu() {
     shareBtn.setAttribute("aria-expanded", isHidden);
 }
 
-// Открытие по основной кнопке
 shareBtn.addEventListener("click", toggleMenu);
 
-// Закрытие по кнопке внутри меню
 closeBtn.addEventListener("click", toggleMenu);

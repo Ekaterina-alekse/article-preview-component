@@ -232,7 +232,7 @@ body {
         width: max-content;
         border-radius: 0.625rem;
         padding: 1.25rem 2rem;
-        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+        box-shadow: var(--shadow-card)
     }
 
     .card__share-menu::after {
@@ -278,7 +278,6 @@ body {
     border-radius: 50%;
     cursor: pointer;
     margin-left: auto;
-    /* Прижимает кнопку к правому краю */
     flex-shrink: 0;
     transition: background-color 0.3s ease;
 }
